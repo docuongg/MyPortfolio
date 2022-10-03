@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane Ticket Price</title>
+    <link rel="stylesheet" href="../assets/css/project.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="body-project">
+        <h1>Plane Ticket Price Analysis</h1>
+        <div >
+            <img class="img-fit" src="../images/thumbs/01.jpg">
+        </div>
+
+        <div>
+            <h1>Introduction</h1>
+            <p>India is a large and overpopulation country. Therefore, the demand for transportation is exceptionally great, especially traveling by plane. Below is an analysis of airfare data for 4 months from March to June 2019</p>
+            <p>In this post, we'll use Python to:</p>
+            <ul>
+                <li>Analysis of people's needs and preferences when traveling by plane</li>
+                <li>Determine what factors affect the price of airfare</li>
+                <li>And, building a model to predict plane ticket price</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Source Code and Dataset</h1>
+            <ul>
+                <li>Source Code : <a href="https://github.com/docuongg/plane-ticket-price/blob/main/plane_ticket_price.py">Github</a></li>
+                <li>Dataset : <a href="https://github.com/docuongg/plane-ticket-price/blob/main/Data_Train.xlsx">Github</a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Analyze people's needs and preferences</h1>
+            <p>Everyone has different needs, preferences and economic conditions, so there will be different airline options. However, there will be airlines that are most popular because they meet all the requirements of customers</p>
+            
+            <h4>Most used airline</h4>
+            <img class="chart" src="./img/mostUsedAirlinePie.svg">
+            <ul>
+                <li>In this chart we can see, Jet Airway (36,03%) is the airline with the most flights, followed by IndiGo (19,22%) and Air India (16,39%)</li>
+                <li>Vistara Premium economy, Jet Airway business, Multiple Carriers Premium Economy and Trujet is the group ranked in the last position</li>
+            </ul>
+
+            <h4>Source and Destination</h4>
+            <div>
+                <img src="./img/NumberOfTakeoffsInCities.svg" class="chart1">
+                <img src="./img/TheCityWhereThePlaneLanded.svg" class="float chart1">
+            </div>
+            <ul>
+                <li>Dehli, Kolkata, Banglore are the places with the most flights taking off</li>
+                <li>Cochin, Banglore are the places with the most flights</li>
+            </ul>
+
+            <h4>Number Of Stops In Each Flight</h4>
+            <img src="./img/NumberOfStopsInEachFlight.svg" class="chart1">
+            <ul>
+                <li>Flights with no stops, 1-stop and 2-stops make up most of the flights</li>
+            </ul>
+
+            <h4>Number of flights of days in a month by month</h4>
+            <img src="./img/numberOfFlightsOfDaysInAMonthByMonth.svg" class="chart1">
+            <ul>
+                <li>Most airlines operate 10 days a month</li>
+                <li>May and June perform better than March and April</li>
+            </ul>
+
+            <h4>Average fare for each class of seats</h4>
+            <img src="./img/AverageFareForEachClassOfSeats.svg" class="chart2">
+            <ul>
+                <li>Business class tickets have the highest price, averaging nearly 57,000 rupees</li>
+            </ul>
+
+            <h4>Ticket price between weekday and weekend</h4>
+            <img src="./img/TicketPriceBetweenWeekdayAndWeekend.svg" class="chart1">
+            <ul>
+                <li>I can see that the ticket price on weekends will be a bit more expensive than weekdays</li>
+            </ul>
+
+            <h4>Fares of each airline by day of the week</h4>
+            <img src="./img/FaresOfEachAirlineByDayOfTheWeek.svg" class="chart3">
+            <ul>
+                <li>Jet Airways Business only operates 3 days a week, but has the highest ticket prices</li>
+            </ul>
+
+            <h4>Fares of each airline by month</h4>
+            <img src="./img/FaresOfEachAirlineByMonth.svg" class="chart3">
+            <ul>
+                <li>There are 3 airlines that only operate in March: Jet Airways Business, Multiple carriers Premium economy and Trujet</li>
+                <li>Jet Airways Business has the highest ticket price</li>
+                <li>It seems that March has the highest ticket prices</li>
+            </ul>
+        </div>
+
+        <div>
+            <h1>Attributes that affect ticket prices</h1>
+            <p>I choose : Airline, Source, Destination, Duration, Total_Stops, Additional_Info, Month, Day, Weekday and Weekend to carry out the correlation test with Price</p>
+            
+            <h4>Duration vs Price</h4>
+            <img src="./img/DurationVsPrice.svg" class="chart1">
+            <ul>
+                <li>Duration and Price are correlated</li>
+            </ul>
+
+            <h4>Use Spearmanr to verify remaining attributes</h4>
+            <ul>
+                <li>Using Spearmanr, we can see that: Airline, Source, Destination, Total_Stops, Additional_Info, Day, Weekday and Weekend were strongly correlated with Price</li>
+            </ul>
+        </div>
+
+        <div>
+            <h1>Building a model to predict plane ticket price</h1>
+            <p>Using 5 machine learning algorithms : Linear Regression Model, Ridge, Decision Tree, Random Forest, XGB</p>
+            
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Training Score</th>
+                    <th scope="col">Testing Score</th>
+                    <th scope="col">MSE</th>
+                    <th scope="col">MAE</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Linear Regression</th>
+                    <td>0.7246833904239203</td>
+                    <td>-5.512428772979723e+22</td>
+                    <td>9.077981233905692e+29</td>
+                    <td>20702922790105.414</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ridge</th>
+                    <td>0.7247235421267524</td>
+                    <td>0.7292182819448791</td>
+                    <td>4459289.101454248</td>
+                    <td>1572.505108064278</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Decision Tree</th>
+                    <td>0.9820229500812211</td>
+                    <td>0.7493098825562673</td>
+                    <td>4128416.484644509</td>
+                    <td>1094.7883504204326</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Random Forest</th>
+                    <td>0.9661163488261748</td>
+                    <td>0.8453350632877388</td>
+                    <td>2547054.031608226</td>
+                    <td>961.1467983431972</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">XGB</th>
+                    <td>0.9278635397998798</td>
+                    <td>0.8794989977116702</td>
+                    <td>1984435.3233229679</td>
+                    <td>912.2263223361699</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+              <ul>
+                <li>Xgboost is the best model</li>
+              </ul>
+              <h4>Predicted vs Actual Data</h4>
+              <img src="./img/preVsActual.svg" class="chart1">
+        </div>
+    </div>
+</body>
+</html>

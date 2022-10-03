@@ -1,0 +1,36 @@
+body {
+    font-family:"Source Sans Pro", Helvetica, sans-serif;
+}
+
+.body-project {
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.img-fit {
+    width : 700px;
+    height: 450px;
+    text-align: center;
+}
+
+.chart {
+    width: 600px;
+    height: 600px;
+}
+.float{
+    float:right;
+}
+
+.chart1 {
+    width: 350px;
+}
+
+.chart2 {
+    width: 500px;
+}
+
+.chart3 {
+    width: 700px;
+}
