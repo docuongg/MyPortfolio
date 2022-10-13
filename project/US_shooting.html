@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Police Shooting</title>
+    <link rel="stylesheet" href="../assets/css/project.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="body-project">
+        <h1>US Police Shootings from 2015 - June 2022</h1>
+        <div >
+            <img class="img-fit" src="../images/thumbs/02.png">
+        </div>
+
+        <div>
+            <h1>Introduction</h1>
+            <p>Since 2015, on average, 1000 people have been shot dead by US police each year</p>
+            <p>The data relies primarily on news accounts, social media postings and police reports. Analysis of more than five years of data reveals that the number and circumstances of fatal shootings and the overall demographics of the victims have remained relatively constant.</p>
+            
+            <p>Before analysis, give a quick look at the dataset, there are 7536 records and 17 columns. I n there</p>
+            <ul>
+                <li>Name : name of victim</li>
+                <li>Date : shooting time</li>
+                <li>Manner of death : the way to categorize death as required by the Washington State Department of Health</li>
+                <li>Armed : furnished with weapons</li>
+                <li>Gender : sex</li>
+                <li>Race : group of people with the same characteristics, ... (ex: Black, Hispanic..)</li>
+                <li>Signs_of_mental_illness : Does the victim show signs of mental illness?</li>
+                <li>Threat_level : Threat level of the victim</li>
+                <li>Flee : What did the victim run away with?</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Source Code and Dataset</h1>
+            <ul>
+                <li>Dataset : <a href="https://github.com/docuongg/US_police_shooting/blob/main/US%20Police%20shootings.xlsx">Github</a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Rate of shootings remains steady</h1>
+            <p>Despite the unpredictable events that lead to fatal shootings, police nationwide have shot and killed almost the same number of people annually — nearly 1,000</p>
+            <p>Probability theory may offer an explanation. It holds that the quantity of rare events in huge populations tends to remain stable absent major societal changes, such as a fundamental shift in police culture or extreme restrictions on gun ownership.</p>
+            <img class= "chart3" src="./img/c1.png">
+
+            <h1>Most victims are young, male</h1>
+            <p>An overwhelming majority of people shot and killed by police are male — over 95 percent. More than half the victims are between 20 and 40 years old.</p>
+            <img src="./img/c2.png" class="chart3">
+            <img src="./img/c3.png" class="chart3">
+            
+            <h1>Black Americans are killed at a much higher rate than White Americans</h1>
+            <p>To explain this, we have to join our data with a table showing the proportions of the US population by race</p>
+            <img src="./img/d1.png" class="chart1">
+            <p>Although half of the people shot and killed by police are White, Black Americans are shot at a disproportionate rate. They account for less than 13 percent of the U.S. population, but are killed by police at 2.5 times the rate of White Americans. Hispanic Americans are also killed by police at a disproportionate rate.</p>
+            <div>
+                <img src="./img/c4.png" class="chart1">
+                <img src="./img/c5.png" class="float chart1">
+            </div>
+
+            <h1>Shootings happen across the country</h1>
+            <p>Police shootings have taken place in every state and have occurred more frequently in cities where populations are concentrated.</p>
+            <p>The states with the highest shooting rates are New Mexico, Alaska and Oklahoma. With a rate of 76, 71, 53 per 1 million people</p>
+            <div class='tableauPlaceholder' id='viz1665626741972' style='position: relative'><noscript><a href='#'><img alt='Victims Rate by State ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16653384756180&#47;VictimsRatebyState&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_16653384756180&#47;VictimsRatebyState' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16653384756180&#47;VictimsRatebyState&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1665626741972');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            <h1>Dashboard</h1>
+            <p>Here is my dashboard after exploring the entire dataset. This dataset has a lot of information and insight that really surprised me</p>
+            <div class="dardboard" class='tableauPlaceholder' id='viz1665627560893' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;FQ&#47;FQXZJZ44D&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;FQXZJZ44D' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;FQ&#47;FQXZJZ44D&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1665627560893');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1677px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+    </div>
+</body>
+</html>

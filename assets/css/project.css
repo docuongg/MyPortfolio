@@ -34,3 +34,8 @@ body {
 .chart3 {
     width: 700px;
 }
+
+.dardboard{
+    padding-left: -100px;
+    padding-right: -100px;
+}
